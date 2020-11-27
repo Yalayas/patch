@@ -28,5 +28,20 @@ function changePolishingB(){
     var selection = document.getElementById("selection4");
     var selectedOption = polishingBSelect.options[polishingBSelect.selectedIndex];
     selection4.textContent = "/" + selectedOption.text;
+    console.log(selection4);
 }
 polishingBSelect.addEventListener("change", changePolishingB);
+
+
+var t6Select = formChoice.t6;
+function changet6(){
+    console.log('!!!!');
+    var selection = document.getElementById("selection5");
+    var selectedOption = t6Select.options[t6Select.selectedIndex];
+
+    const str6 = selectedOption.text.split('=')[0];
+
+    selection5.textContent = "-" + str6;
+    console.log(selection5);
+}
+t6Select.addEventListener("change", changet6);
