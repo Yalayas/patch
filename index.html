@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery and JS bundle w/ Popper.js  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+    <title>Title</title>
+
+</head>
+<body>
+<h1>Первый</h1>
+
+<div class="container">
+
+
+
+
+
+ <form name="formChoice">
+
+    <table class="table table-borderless">
+        <thead>
+        <tr>
+            <th>Изделие<br>&nbsp;</th>
+            <th>Тип<br> коннектора<br> сторона A</th>
+            <th>Тип<br> полировки<br> торца</th>
+            <th>Тип <br>коннектора<br> сторона B</th>
+            <th>Тип<br> полировки<br> торца</th>
+            <th>Тип и количество<br> волокон</th>
+            <th>Диаметр<br> кабеля</th>
+            <th>Длина<br>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Патч-корд</td>
+            <td>
+                <select name="sideA" class="browser-default custom-select" id="sideA">
+                    <option value="0" selected>---</option>
+                    <option value="1">ST</option>
+                    <option value="2">FC</option>
+                    <option value="3">SC</option>
+                    <option value="4">LC</option>
+                    <option value="5"> MTRJ(F)</option>
+                    <option value="6">MTRJ(M)</option>
+                </select>
+            </td>
+
+            <td>
+            <select name="polishingA" class="browser-default custom-select" id="polishingA">
+                <option value="0" selected>---</option>
+                <option value="1">PC</option>
+                <option value="2">SPC</option>
+                <option value="3">UPC</option>
+                <option value="4">APC</option>
+            </select>
+        </td>
+            <td>
+                <select name="sideB" class="browser-default custom-select" id="sideB">
+                    <option value="0" selected>---</option>
+                    <option value="1">ST</option>
+                    <option value="2">FC</option>
+                    <option value="3">SC</option>
+                    <option value="4">LC</option>
+                    <option value="5"> MTRJ(F)</option>
+                    <option value="6">MTRJ(M)</option>
+                </select>
+            </td>
+            <td>
+                <select class="browser-default custom-select" id="polishingB">
+                    <option value="0" selected>---</option>
+                    <option value="1">PC</option>
+                    <option value="2">SPC</option>
+                    <option value="3">UPC</option>
+                    <option value="4">APC</option>
+                </select>
+            </td>
+
+            <td>
+                <select class="browser-default custom-select" id="t6">
+                    <option value="0" selected>---</option>
+                    <option value="1">A=9/125мкм</option>
+                    <option value="2">B=50/125мкм</option>
+                    <option value="3">C=62.5/125мкм</option>
+                    <option value="4">AA=9/125мкм х 2</option>
+                    <option value="5">BB=50/125мкм х 2</option>
+                    <option value="6">CC=62.5/125мкм х 2</option>
+                </select>
+            </td>
+            <td>
+                <select class="browser-default custom-select" id="t7">
+                    <option value="0" selected>---</option>
+                    <option value="1">900=0,9мм</option>
+                    <option value="2">2 =2мм</option>
+                    <option value="3">3=3мм</option>
+                </select>
+            </td>
+
+            <td>
+                <input type="text" class="form-control lengh" placeholder="Длина">
+            </td>
+        </tr>
+      </tbody>
+    </table>
+
+ </form>
+
+<div class="d-flex">
+    <div class="selection" id="selection"></div>
+    <div class="selection" id="selection2"></div>
+    <div class="selection" id="selection3"></div>
+    <div class="selection" id="selection4"></div>
+    <div class="selection" id="selection5"></div>
+    <div class="selection" id="selection6"></div>
+    <div class="selection" id="selection7"></div>
+</div>
+    <script src="js/patch-cord.js"></script>
+  <!--
+    <script>
+        var TypesSelect = choicePatch.sideA;
+        function changeOption(){
+            var selection = document.getElementById("selection");
+            var selectedOption = TypesSelect.options[TypesSelect.selectedIndex];
+            selection.textContent = "Патч-корд " + selectedOption.text;
+        }
+        TypesSelect.addEventListener("change", changeOption);
+
+    </script>
+
+    <script>
+        var TypesSelect = choicePatch.polishingA;
+        function changeOption(){
+            var selection = document.getElementById("polishingA");
+            var selectedOption = TypesSelect.options[TypesSelect.selectedIndex];
+            selection.textContent = "/" + selectedOption.text;
+        }
+        TypesSelect.addEventListener("change", changeOption);
+
+
+
+    </script>
+-->
+
+
+</div>
+  </body>
+</html>
