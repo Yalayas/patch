@@ -1,36 +1,36 @@
-var sideaSelect = formChoice.sideA;
-function changeOption(){
+var t2Select = formChoice.t2;
+function changet2(){
     var selection = document.getElementById("selection");
-    var selectedOption = sideaSelect.options[sideaSelect.selectedIndex];
+    var selectedOption = t2Select.options[t2Select.selectedIndex];
     selection.textContent = "Патч-корд " + selectedOption.text;
 }
-sideaSelect.addEventListener("change", changeOption);
+t2Select.addEventListener("change", changet2);
 
 
-var polishingASelect = formChoice.polishingA;
-function changePolishingA(){
+var t3Select = formChoice.t3;
+function changet3(){
     var selection = document.getElementById("selection2");
-    var selectedOption = polishingASelect.options[polishingASelect.selectedIndex];
+    var selectedOption = t3Select.options[t3Select.selectedIndex];
     selection2.textContent = "/" + selectedOption.text;
 }
-polishingASelect.addEventListener("change", changePolishingA);
+t3Select.addEventListener("change", changet3);
 
-var sideBSelect = formChoice.sideB;
-function changeSideB(){
+var t4Select = formChoice.t4;
+function changet4(){
     var selection = document.getElementById("selection3");
-    var selectedOption = sideBSelect.options[sideBSelect.selectedIndex];
+    var selectedOption = t4Select.options[t4Select.selectedIndex];
     selection3.textContent = "-" + selectedOption.text;
 }
-sideBSelect.addEventListener("change", changeSideB);
+t4Select.addEventListener("change", changet4);
 
-var polishingBSelect = formChoice.polishingB;
-function changePolishingB(){
+var t5Select = formChoice.t5;
+function changet5(){
     var selection = document.getElementById("selection4");
-    var selectedOption = polishingBSelect.options[polishingBSelect.selectedIndex];
+    var selectedOption = t5Select.options[t5Select.selectedIndex];
     selection4.textContent = "/" + selectedOption.text;
     console.log(selection4);
 }
-polishingBSelect.addEventListener("change", changePolishingB);
+t5Select.addEventListener("change", changet5);
 
 
 var t6Select = formChoice.t6;
@@ -45,3 +45,25 @@ function changet6(){
     console.log(selection5);
 }
 t6Select.addEventListener("change", changet6);
+
+var t7Select = formChoice.t7;
+function changet7(){
+    console.log('!!!!');
+    var selection = document.getElementById("selection6");
+    var selectedOption = t7Select.options[t7Select.selectedIndex];
+
+    const str7 = selectedOption.text.split('=')[0];
+
+    selection6.textContent = "-" + str7;
+    console.log(selection6);
+}
+t7Select.addEventListener("change", changet7);
+
+var t8Select = formChoice.t8;
+function lenght8(){
+
+    var selection = document.getElementsByTagName("input")[0];
+
+}
+
+

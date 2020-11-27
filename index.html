@@ -42,7 +42,7 @@
         <tr>
             <td>Патч-корд</td>
             <td>
-                <select name="sideA" class="browser-default custom-select" id="sideA">
+                <select class="browser-default custom-select" id="t2">
                     <option value="0" selected>---</option>
                     <option value="1">ST</option>
                     <option value="2">FC</option>
@@ -54,7 +54,7 @@
             </td>
 
             <td>
-            <select name="polishingA" class="browser-default custom-select" id="polishingA">
+            <select class="browser-default custom-select" id="t3">
                 <option value="0" selected>---</option>
                 <option value="1">PC</option>
                 <option value="2">SPC</option>
@@ -63,7 +63,7 @@
             </select>
         </td>
             <td>
-                <select name="sideB" class="browser-default custom-select" id="sideB">
+                <select class="browser-default custom-select" id="t4">
                     <option value="0" selected>---</option>
                     <option value="1">ST</option>
                     <option value="2">FC</option>
@@ -74,7 +74,7 @@
                 </select>
             </td>
             <td>
-                <select class="browser-default custom-select" id="polishingB">
+                <select class="browser-default custom-select" id="t5">
                     <option value="0" selected>---</option>
                     <option value="1">PC</option>
                     <option value="2">SPC</option>
@@ -104,7 +104,7 @@
             </td>
 
             <td>
-                <input type="text" class="form-control lengh" placeholder="Длина">
+                <input type="text" class="form-control lengh" placeholder="Длина" id="t8">
             </td>
         </tr>
       </tbody>
@@ -120,35 +120,12 @@
     <div class="selection" id="selection5"></div>
     <div class="selection" id="selection6"></div>
     <div class="selection" id="selection7"></div>
+    <div class="selection" id="selection8"></div>
 </div>
     <script src="js/patch-cord.js"></script>
-  <!--
-    <script>
-        var TypesSelect = choicePatch.sideA;
-        function changeOption(){
-            var selection = document.getElementById("selection");
-            var selectedOption = TypesSelect.options[TypesSelect.selectedIndex];
-            selection.textContent = "Патч-корд " + selectedOption.text;
-        }
-        TypesSelect.addEventListener("change", changeOption);
-
-    </script>
-
-    <script>
-        var TypesSelect = choicePatch.polishingA;
-        function changeOption(){
-            var selection = document.getElementById("polishingA");
-            var selectedOption = TypesSelect.options[TypesSelect.selectedIndex];
-            selection.textContent = "/" + selectedOption.text;
-        }
-        TypesSelect.addEventListener("change", changeOption);
 
 
 
-    </script>
--->
-
-
-</div>
+   </div>
   </body>
 </html>
