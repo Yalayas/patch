@@ -1,3 +1,5 @@
+
+/*
 var t2Select = formChoice.t2;
 function changet2(){
     var selection = document.getElementById("selection");
@@ -5,8 +7,22 @@ function changet2(){
     selection.textContent = "Патч-корд " + selectedOption.text;
 }
 t2Select.addEventListener("change", changet2);
+*/
 
 
+/* 
+Вариант 1 - ссылка на событие  прописана внутри HTML, не нужны addEventListener
+*/
+
+function onChange_t2() {
+    const t2 = document.getElementById("t2");
+    const text = t2.options[t2.value].text;
+    document.getElementById("selection").textContent = "Патч-корд " + text;
+}
+
+
+
+/*
 var t3Select = formChoice.t3;
 function changet3(){
     var selection = document.getElementById("selection2");
@@ -14,8 +30,24 @@ function changet3(){
     selection2.textContent = "/" + selectedOption.text;
 }
 t3Select.addEventListener("change", changet3);
+*/
 
-var t4Select = formChoice.t4;
+
+/*
+В стиле EJS6, стрелочная функция
+*/
+
+document.getElementById("t3").addEventListener('change', (event) => {
+    document.getElementById("selection2").textContent = "/" + event.target.options[event.target.value].text;
+});
+
+
+
+/*
+Вариант 3  - по сути твой вариант
+*/
+
+var t4Select = document.getElementById("t4")
 function changet4(){
     var selection = document.getElementById("selection3");
     var selectedOption = t4Select.options[t4Select.selectedIndex];
