@@ -21,7 +21,6 @@ function onChange_t2() {
 }
 
 
-
 /*
 var t3Select = formChoice.t3;
 function changet3(){
@@ -86,16 +85,75 @@ function changet7(){
 
     const str7 = selectedOption.text.split('=')[0];
 
-    selection6.textContent = "-" + str7;
+    selection6.textContent =  str7;
     console.log(selection6);
 }
 t7Select.addEventListener("change", changet7);
+
+
+var input = document.getElementById("selection8");
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        console.log("Нажали Энтер");
+    }
+});
+
+
+document.querySelector('input').onkeyup = function() {
+    document.getElementById("selection8").textContent = ('-' + this.value);
+
+}
+/*
+$(document).ready(function(){
+    $("#t8").keypress(function(e){
+        if(e.keyCode==13){
+            console.log('a2');
+            //нажата клавиша enter - здесь ваш код
+        }
+    });
+
+});
+
+
+
+
+
 
 var t8Select = formChoice.t8;
 function lenght8(){
 
     var selection = document.getElementsByTagName("input")[0];
-
+    console.log(selection);
 }
 
+
+function onChange_t8() {
+
+    const t8 = document.getElementById("t8");
+    const text = t8.options[t8.value].text;
+    document.getElementById("selection").textContent = "-" + text;
+}
+*/
+
+    /**/
+   // событие на onclick кнопки
+    var button = document.getElementById('copyButton');
+    button.addEventListener('click', function (copyName) {
+        //нашли наш контейнер
+        var ta = document.getElementById('result');
+        //производим его выделение
+        var range = document.createRange();
+        range.selectNode(ta);
+        window.getSelection().addRange(range);
+
+        //пытаемся скопировать текст в буфер обмена
+        try {
+            document.execCommand('copy');
+            console.log('Скопировано !');
+        } catch(err) {
+            console.log('Не могу скопировать !');
+        }
+        //чистим выделение текста, чтобы пользователь "не парился"
+        window.getSelection().removeAllRanges();
+    });
 

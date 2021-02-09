@@ -1,3 +1,4 @@
+/*
 .container {
     text-align: center;
 }
@@ -9,7 +10,7 @@ input {
     margin: 0 auto;
 }
 button {
-    width: 90px;
+    width: 190px;
 }
 .dropdown-toggle {
     margin-right: 3px;
@@ -20,19 +21,10 @@ button {
     }
 .selection {
     text-align: left;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
 }
-/*
-.dropdown {
-    min-width: 10%;
-}
-.title {
-    min-width: 12%;
-}
-.line {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+button {
+    margin-right: 6%;
 }
 */

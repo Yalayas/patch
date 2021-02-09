@@ -12,9 +12,17 @@
 
 
     <title>Title</title>
-
+<style>
+    .container {text-align: center;}
+    h1 {color: #87afff;}
+    input {max-width: 50%;margin: 0 auto;}
+    button {width: 190px;}
+    .selection {text-align: left;font-size: 20px;font-weight: 600;}
+    button {margin-right: 6%;}
+</style>
 </head>
 <body>
+
 <h1>Первый</h1>
 
 <div class="container">
@@ -28,7 +36,7 @@
     <table class="table table-borderless">
         <thead>
         <tr>
-            <th>Изделие<br>&nbsp;</th>
+
             <th>Тип<br> коннектора<br> сторона A</th>
             <th>Тип<br> полировки<br> торца</th>
             <th>Тип <br>коннектора<br> сторона B</th>
@@ -40,7 +48,7 @@
         </thead>
         <tbody>
         <tr>
-            <td>Патч-корд</td>
+
             <td>
                 <select class="browser-default custom-select" id="t2" onchange="onChange_t2()">
                     <option value="0" selected>---</option>
@@ -104,7 +112,7 @@
             </td>
 
             <td>
-                <input type="text" class="form-control lengh" placeholder="Длина" id="t8">
+                <input type="text" class="form-control lengh" placeholder="Длина" value="" id="t8">
             </td>
         </tr>
       </tbody>
@@ -112,7 +120,8 @@
 
  </form>
 
-<div class="d-flex">
+    <div class="d-flex flex-row w-100">
+<div class="d-flex" id="result">
     <div class="selection" id="selection"></div>
     <div class="selection" id="selection2"></div>
     <div class="selection" id="selection3"></div>
@@ -121,6 +130,10 @@
     <div class="selection" id="selection6"></div>
     <div class="selection" id="selection7"></div>
     <div class="selection" id="selection8"></div>
+</div>
+
+    <button type="button" class="btn btn-primary ml-auto" id="copyButton">Скопировать</button>
+
 </div>
     <script src="js/patch-cord.js"></script>
 
