@@ -21,7 +21,6 @@ function onChange_t2() {
 }
 
 
-/*
 var t3Select = formChoice.t3;
 function changet3(){
     var selection = document.getElementById("selection2");
@@ -29,17 +28,18 @@ function changet3(){
     selection2.textContent = "/" + selectedOption.text;
 }
 t3Select.addEventListener("change", changet3);
-*/
 
 
 /*
 В стиле EJS6, стрелочная функция
 */
 
+
+/*
 document.getElementById("t3").addEventListener('change', (event) => {
     document.getElementById("selection2").textContent = "/" + event.target.options[event.target.value].text;
 });
-
+*/
 
 
 /*
@@ -90,19 +90,30 @@ function changet7(){
 }
 t7Select.addEventListener("change", changet7);
 
-
 var input = document.getElementById("selection8");
 input.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-        console.log("Нажали Энтер");
-    }
 });
 
 
-document.querySelector('input').onkeyup = function() {
-    document.getElementById("selection8").textContent = ('-' + this.value);
-
+/*
+ document.querySelector('input').onkeyup = function() {
+    document.getElementById("selection8").textContent =  '-' + this.value;
 }
+*/
+
+document.getElementById('t8').onkeypress = function(event) {
+    document.getElementById("selection8").textContent =  '-' + this.value;
+    if (event.keyCode == 13) {
+        event.preventDefault();
+    }
+}
+
+document.getElementById('t8').onkeyup = function(event) {
+    document.getElementById("selection8").textContent =  '-' + this.value;
+}
+
+
+
 /*
 $(document).ready(function(){
     $("#t8").keypress(function(e){
@@ -111,12 +122,7 @@ $(document).ready(function(){
             //нажата клавиша enter - здесь ваш код
         }
     });
-
 });
-
-
-
-
 
 
 var t8Select = formChoice.t8;
@@ -135,7 +141,8 @@ function onChange_t8() {
 }
 */
 
-    /**/
+
+
    // событие на onclick кнопки
     var button = document.getElementById('copyButton');
     button.addEventListener('click', function (copyName) {
@@ -156,4 +163,3 @@ function onChange_t8() {
         //чистим выделение текста, чтобы пользователь "не парился"
         window.getSelection().removeAllRanges();
     });
-
